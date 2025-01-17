@@ -1,0 +1,98 @@
+/* General styles */
+body {
+    display: flex;
+    flex-direction: column; /* Layout for header, main, footer */
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    align-items: center;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    flex-shrink: 0; /* Prevents header from shrinking */
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+header ul li {
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+header ul .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Main container styles */
+main {
+    display: flex;
+    flex-direction: row; /* Layout for article and aside */
+    flex: auto; /* Allows <main> to adjust height and width dynamically */
+}
+
+/* Article styles */
+article {
+    flex: 2; /* Takes up 2/3 of the available space */
+    overflow-y: auto; /* Allows vertical scrolling */
+    padding: 20px;
+    background-color: #f4f4f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+/* Aside styles */
+aside {
+    flex: 1; /* Takes up 1/3 of the available space */
+    overflow-y: auto; Allows vertical scrolling
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-left: 2px solid #ddd;
+    margin: 10px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    flex-shrink: 0; /* Prevents footer from shrinking */
+}
+
+/* Hover effects for header links */
+header ul li:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design styles */
+.works_on_smartphone {
+    flex-direction: column; /* Adjusts layout for smaller screens */
+}
+
+article, aside {
+    flex: none; /* Removes flex proportions for smaller screens */
+    width: 46%; /* Makes them stack vertically */
+}
+
+/* Optional: Logo customization */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFD700; /* Gold color for the logo */
+}
+
